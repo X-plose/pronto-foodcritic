@@ -20,10 +20,7 @@ module Pronto
         result = { cookbook_paths: [], role_paths: [] }
         ruby_patches.each do |patch|
           path = patch.new_file_full_path.to_s
-          if path.include?('cookbook')
             result[:cookbook_paths] << path
-          elsif path.include?('role')
-            result[:role_paths] << path
           end
         end
         result
