@@ -21,7 +21,6 @@ module Pronto
         ruby_patches.each do |patch|
           path = patch.new_file_full_path.to_s
             result[:cookbook_paths] << path
-          end
         end
         result
       end
